@@ -1,0 +1,20 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">关于</view>
+</cu-custom>
+<view>
+	<view class="margin radius bg-white">
+		<view class="cu-bar">
+			<view class="action"><text class="cuIcon-titles text-brown"></text><text class="text-xl text-bold">关于办公助手</text></view>
+		</view>
+		<view class="text padding"><text class="cuIcon-title margin-right text-green"></text>这是一款通过colorUI开发的小程序，主要用于公司会员信息录入。请在“我的主页”中填写并提交“个人信息+家庭信息”，您还可以提交活动的参与信息。</view>
+		<view class="text padding"><text class="cuIcon-title margin-right text-red"></text>该项目是个人独立开发的。后期还会有一些实用的组件。如果您有一些好的想法可以在“联系客服”里提交给开发者，会逐渐完善。</view>
+		<view class="text padding"><text class="cuIcon-title margin-right text-blue"></text>请您放心，您所提交的内容是完全保密的。只有开发者本人通过后台能获取到，并用于公司工会会员建档。٩(๑❛ᴗ❛๑)۶</view>
+		<view class="text padding"><text class="cuIcon-title margin-right text-blue"></text>如果这个项目有帮到您，或者您觉得很赞，可以在“我的主页”里扫描赞赏码支持一下！</view>
+		<view class="text padding"><text class="cuIcon-title margin-right text-blue"></text>开发者联系电话：</view>
+	</view>
+	<view class="container">
+		<button open-type="contact" class="flex-direction bg-gradual-pink text-center cu-btn content">联系客服</button>
+		<button open-type="feedback" class="flex-direction bg-gradual-green text-center cu-btn content">意见反馈</button>
+	</view>
+</view>

@@ -1,0 +1,19 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">关于</view>
+</cu-custom>
+<view>
+	<view class="margin radius bg-white">
+		<view class="cu-bar">
+			<view class="action"><text class="cuIcon-titles text-brown"></text><text class="text-xl text-bold">关于办公助手</text></view>
+		</view>
+		<view class="text padding"><text class="cuIcon-title margin-right text-green"></text>这是一款通过colorUI开发的小程序，主要用于公司职工信息录入。请点击：我的主页→头像登录→点击我的档案库→添加档案→填写并提交。</view>
+		<view class="text padding"><text class="cuIcon-title margin-right text-red"></text>该项目是我个人开发的一款微信小程序。这个项目不仅能提交个人信息，后期还会有一些实用的组件。或者你有一些好的想法可以在“联系客服”里提交给我，我会逐渐完善。</view>
+		<view class="text padding"><text class="cuIcon-title margin-right text-blue"></text>如果这个项目有帮到你，或者你觉得很赞，可以在我的主页里扫描赞赏码支持一下！毕竟我也是花了时间和精力，并且掉了很多头发的。</view>
+		<view class="text padding"><text class="cuIcon-title margin-right text-blue"></text>放心，您提交的信息是完全安全的。只有作者本人才可以通过后台获取到大家提交的档案。٩(๑❛ᴗ❛๑)۶</view>
+	</view>
+	<view class="container">
+		<button open-type="contact" class="flex-direction bg-gradual-pink text-center cu-btn content">联系客服</button>
+		<button open-type="feedback" class="flex-direction bg-gradual-green text-center cu-btn content">意见反馈</button>
+	</view>
+</view>

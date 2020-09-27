@@ -1,0 +1,97 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">家庭信息</view>
+</cu-custom>
+<view class="margin radius bg-white">
+	<view class="cu-bar">
+		<view class="action">
+            <text class="cuIcon-titles text-brown"></text>
+            <text class="text-xl text-bold">我的历史信息：</text>
+        </view>
+    </view>    
+
+   <view class="text padding" wx:for="{{users}}" wx:key="index" data-content="{{item}}" bindtap='setCurUser'>姓名:
+         <text class="cuIcon-title margin-right text-red">{{item.name}}</text>
+   </view>
+
+</view>
+
+  <form bindsubmit="adduser" bindreset="formReset">
+    <view class="cu-form-group">姓名：
+         <input bindchange="getUname" name="name" value="{{curUser.name}}"></input>
+    </view>
+
+      <view class="cu-form-group">家庭人均月收入:
+        <radio-group bindchange="getUpinkun" name="pinkun">
+         <label><radio value="1" checked="{{curUser.pinkun === '1'}}"/>600元以上</label>
+         <label><radio value="0" checked="{{curUser.pinkun === '0'}}"/>600元以下</label>
+        </radio-group>
+      </view>
+
+  <view class="cu-form-group">本人情况:
+    <radio-group bindchange="getUdusheng" name="dusheng">
+        <label><radio value="2" checked="{{curUser.dusheng === '2'}}"/>我是独生子女</label>
+        <label><radio value="3" checked="{{curUser.dusheng === '3'}}"/>我有兄弟姐妹</label>
+    </radio-group>
+  </view>
+
+
+      <view class="cu-form-group">婚姻状况
+        <radio-group bindchange="getUhunyin" name="hunyin">
+         <label><radio value="a" checked="{{curUser.hunyin === 'a'}}"/>未婚</label>
+         <label><radio value="b" checked="{{curUser.hunyin === 'b'}}"/>已婚</label>
+         <label><radio value="c" checked="{{curUser.hunyin === 'c'}}"/>离异</label>
+         <label><radio value="d" checked="{{curUser.hunyin === 'd'}}"/>丧偶</label>  
+        </radio-group>
+      </view>
+
+<view class="cu-form-group">配偶姓名：
+  <input bindchange="getUpname" value="{{curUser.pname}}" name="pname" class="weui-input" placeholder="请输入"/>
+</view>
+
+	<view class="cu-form-group">配偶工作单位：
+     <input bindchange="getUpwork" value="{{curUser.pwork}}" name="pwork" class="weui-input" placeholder="请输入"/>
+	</view>
+
+<view class="cu-form-group">结婚日期：
+  <input bindchange="getUhdate" value="{{curUser.hdate}}" name="hdate" class="weui-input" placeholder="请输入结婚时间"/>
+</view>
+
+	<view class="cu-form-group">一胎姓名：
+    <input bindchange="getUonename" value="{{curUser.onename}}" name="onename" class="weui-input" placeholder="请输入"/>
+	</view>
+
+  <view class="cu-form-group">一胎性别：:
+    <radio-group bindchange="getUonesex" name="onesex">
+        <label><radio value="4" checked="{{curUser.onesex === '4'}}"/>男孩</label>
+        <label><radio value="5" checked="{{curUser.onesex === '5'}}"/>女孩</label>
+    </radio-group>
+  </view>
+
+<view class="cu-form-group">一胎生日：
+  <input bindchange="getUonedate" value="{{curUser.onedate}}" name="onedate" class="weui-input" placeholder="请输入一胎生日"/>
+</view>
+
+	<view class="cu-form-group">二胎姓名：
+     <input bindchange="getUtwoname" value="{{curUser.twoname}}" name="twoname" class="weui-input" placeholder="请输入"/>
+	</view>
+
+
+  <view class="cu-form-group">一胎性别：:
+    <radio-group bindchange="getUtwosex" name="twosex">
+        <label><radio value="6" checked="{{curUser.twosex === '6'}}"/>男孩</label>
+        <label><radio value="7" checked="{{curUser.twosex === '7'}}"/>女孩</label>
+    </radio-group>
+  </view>
+<view class="cu-form-group">二胎生日：
+  <input bindchange="getUtwodate" value="{{curUser.twodate}}" name="twodate" class="weui-input" placeholder="请输入二胎生日"/>
+</view>
+
+
+    <view class="container">
+      <button class="cu-btn bg-gradual-green text-center" formType="submit">添加报名</button>
+      <button class="cu-btn bg-gradual-blue text-center" bindtap='updateuser'>提交修改</button>
+      <button class="cu-btn bg-gradual-orange text-center" formType="reset">清空内容</button>
+      <button class="cu-btn bg-gradual-red text-center" bindtap='deleteuser'>删除信息</button>
+    </view>
+  </form>

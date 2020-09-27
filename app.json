@@ -1,0 +1,47 @@
+{
+    "debug": true,
+    "pages": [
+        "pages/home/home",
+        "pages/view/view",
+        "pages/geren/geren",
+        "pages/user/user",
+        "pages/hodong/hodong",
+        "pages/bahe/bahe",
+        "pages/ball/ball",
+        "pages/im/im",
+        "pages/im/room/room",
+    
+        "pages/about/about/about"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#39b54a",
+        "navigationBarTitleText": "Color UI",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white"
+    },
+    "usingComponents": {
+        "cu-custom": "/colorui/components/cu-custom"
+    },
+    "tabBar": {
+        "color": "#b3b3b3",
+        "selectedColor": "#fc8e5d",
+        "backgroundColor": "#f5f5f7",
+        "borderStyle": "white",
+        "position": "bottom",
+        "list": [
+            {
+                "pagePath": "pages/im/room/room",
+                "text": "聊天室",
+                "iconPath": "images/tabbar/plugin.png",
+                "selectedIconPath": "images/tabbar/plugin_cur.png"
+            },
+            {
+                "pagePath": "pages/home/home",
+                "text": "我的主页",
+                "iconPath": "images/tabbar/about.png",
+                "selectedIconPath": "images/tabbar/about_cur.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

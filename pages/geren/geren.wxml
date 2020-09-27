@@ -1,0 +1,98 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">个人信息</view>
+</cu-custom>
+<view class="margin radius bg-white">
+	<view class="cu-bar">
+		<view class="action">
+            <text class="cuIcon-titles text-brown"></text>
+            <text class="text-xl text-bold">我的历史档案：</text>
+        </view>
+    </view>    
+   <view class="text padding" wx:for="{{users}}" wx:key="index" data-content="{{item}}" bindtap='setCurUser'>姓名:
+         <text class="cuIcon-title margin-right text-red">{{item.name}}</text>
+   </view>
+
+</view>
+  <form bindsubmit="adduser" bindreset="formReset">
+    <view class="cu-form-group">姓名：
+         <input bindchange="getUname" name="name" value="{{curUser.name}}"></input>
+    </view>
+
+      <view class="cu-form-group">性别：
+        <radio-group bindchange="getUsex" name="sex">
+         <label><radio value="1" checked="{{curUser.sex === '1'}}"/>男</label>
+         <label><radio value="0" checked="{{curUser.sex === '0'}}"/>女</label>
+        </radio-group>
+      </view>
+
+  <view class="cu-form-group">所属部门：
+		<input bindchange="getUbumen" value="{{curUser.bumen}}" name="bumen" class="weui-input"  placeholder="请输入部门"/>
+  </view>
+
+	<view class="cu-form-group">民族：
+		<input bindchange="getUminzu" value="{{curUser.minzu}}" name="minzu" class="weui-input"  placeholder="请输入民族"/>
+	</view>
+
+	<view class="cu-form-group">手机号码：
+		<input bindchange="getUmobile_number" value="{{curUser.mobile_number}}" name="mobile_number" class="weui-input" type="number" placeholder="请输入手机号码"/>
+		<view class="cu-capsule radius">
+			<view class="cu-tag bg-blue">
+				+86
+			</view>
+			<view class="cu-tag line-blue">
+				中国大陆
+			</view>
+		</view>
+	</view>
+
+  <view class="cu-form-group">身份证号码：
+    <input bindchange="getUidcard_number" value="{{curUser.idcard_number}}" name="idcard_number" class="weui-input" type="number" placeholder="请输入"/>
+  </view>
+
+  <view class="cu-form-group">学历：
+   <input bindchange="getUxueli" value="{{curUser.xueli}}" name="xueli"  class="weui-input" placeholder="请输入学历"/>
+  </view>
+
+<view class="cu-form-group">毕业学校及专业：
+		<input bindchange="getUxuexiao" value="{{curUser.xuexiao}}" name="xuexiao" class="weui-input"  placeholder="请输入毕业学校及专业"/>
+</view>
+
+<view class="cu-form-group">本人籍贯：
+    <input bindchange="getUjiguan" value="{{curUser.jiguan}}" name="jiguan" class="weui-input"  placeholder="请输入籍贯"/>
+</view>
+
+<view class="cu-form-group">家庭住址：
+	<input bindchange="getUaddress" value="{{curUser.address}}" name="address" class="weui-input" placeholder="请输入"/>
+	<text class="cuIcon-locationfill text-orange"></text>
+</view>
+
+<view class="cu-form-group">政治面貌：
+  	<input bindchange="getUzhengzhi" value="{{curUser.zhengzhi}}" name="zhengzhi" class="weui-input" placeholder="中共党员/预备党员/群众/共青团员/其他"/>
+</view>
+
+<view class="cu-form-group">政治生日：
+     <input bindchange="getUddate" value="{{curUser.ddate}}" name="ddate" class="weui-input" placeholder="成为预备党员的日期 格式：2001-01-01"/>
+</view>
+
+<view class="cu-form-group">参加工作时间：
+    <input bindchange="getUdate" value="{{curUser.date}}" name="date" class="weui-input" placeholder="格式：2001-01-01"/>
+</view>
+
+<view class="cu-form-group">获得荣誉：
+		<input bindchange="getUothers" value="{{curUser.others}}" maxlength="-1" name="others" disabled="{{modalName!=null}}" placeholder="格式：XX年被XX（单位）授予XX称号" />
+</view>
+
+<view class="cu-form-group">爱好特长：
+		<input bindchange="getUlikes" value="{{curUser.likes}}" maxlength="-1" name="likes" disabled="{{modalName!=null}}" placeholder="例如：健身、游泳、摄影、看电影" />
+</view>
+
+    <view class="container">
+      <button class="cu-btn bg-gradual-green text-center" formType="submit">添加报名</button>
+      <button class="cu-btn bg-gradual-blue text-center" bindtap='updateuser'>提交修改</button>
+      <button class="cu-btn bg-gradual-orange text-center" formType="reset">清空内容</button>
+      <button class="cu-btn bg-gradual-red text-center" bindtap='deleteuser'>删除信息</button>
+    </view>
+  </form>
+
+

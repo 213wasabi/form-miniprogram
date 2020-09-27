@@ -1,0 +1,7 @@
+/* pages/hodong/hodong.wxss */
+.container {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }

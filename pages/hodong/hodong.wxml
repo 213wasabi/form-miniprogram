@@ -1,0 +1,35 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">活动报名</view>
+</cu-custom>
+<view class="margin radius bg-white">
+	<view class="cu-bar">
+		<view class="action">
+            <text class="cuIcon-titles text-brown"></text>
+            <text class="text-xl text-bold">金秋杯篮球赛</text>
+        </view>
+	</view>
+	<view class="text padding">为了丰富职工的业余文化生活，增强职工的健康体魄，培育职工的团结、拼搏精神，公司决定于2020年10月举办第九届“金秋杯”篮球比赛活动。</view>
+	<view class="text padding"><text class="cuIcon-title margin-right text-red">参赛范围：</text>以公司各基层工会为单位组队参赛，共分四支代表队。</view>
+	<view class="text padding"><text class="cuIcon-title margin-right text-yellow">组队要求：</text>每队队员人数8-10人，均为在职职工。比赛方式：采用单循环比赛。</view>
+	<view class="text padding"><text class="cuIcon-title margin-right text-brown">报名方式：</text>请点击下方“我要报名!"，并填写提交。</view>
+	<view class='container'>
+		<button class="cu-btn bg-gradual-blue text-center" bindtap='goSet'>我要报名！</button>
+    </view>
+</view>
+
+<view class="margin radius bg-white">
+	<view class="cu-bar">
+		<view class="action">
+            <text class="cuIcon-titles text-brown"></text>
+            <text class="text-xl text-bold">迎十一·庆中秋拔河比赛</text>
+        </view>
+	</view>
+	<view class="text padding">在双节来临之际，为营造一个欢乐、轻松、幸福的喜庆氛围，同时加强内部的沟通，提升工作的凝聚力，激发职工的工作热情。公司决定在9月29日，办公楼广场举办拔河比赛。</view>
+	<view class="text padding"><text class="cuIcon-title margin-right text-red">组队要求：</text>基层工会各组织一支队伍参赛，机关工会和后勤工会组成联队，共四支队伍。每支参赛队伍共10名队员（其中包括3名女同志）。</view>
+	<view class="text padding"><text class="cuIcon-title margin-right text-yellow">参赛要求：</text>比赛时，队员必须穿运动鞋，以免受伤。比赛时间为9月29日下午4:20。</view>
+
+	<view class='container'>
+		<button class="cu-btn bg-gradual-orange text-center" bindtap='goGet'>我要报名！</button>
+    </view>
+</view>

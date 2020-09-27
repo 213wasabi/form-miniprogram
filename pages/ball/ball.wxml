@@ -1,0 +1,52 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">活动报名</view>
+</cu-custom>
+<view class="margin radius bg-white">
+	<view class="cu-bar">
+		<view class="action">
+            <text class="cuIcon-titles text-brown"></text>
+            <text class="text-xl text-bold">金秋杯篮球赛报名信息：</text>
+        </view>
+    </view>    
+   <view class="text padding" wx:for="{{users}}" wx:key="index" data-content="{{item}}" bindtap='setCurUser'>姓名:
+         <text class="cuIcon-title margin-right text-red">{{item.name}}</text>
+   </view>
+
+</view>
+
+  <form bindsubmit="adduser" bindreset="formReset">
+    <view class="cu-form-group">姓名：
+         <input bindchange="getUname" name="name" value="{{curUser.name}}"></input>
+    </view>
+
+    <view class="cu-form-group">鞋码：
+      <input bindchange="getUage" name="age" value="{{curUser.age}}"></input>
+    </view>
+
+
+      <view class="cu-form-group">是否队长:
+        <radio-group bindchange="getUcaptain" name="captain">
+         <label><radio value="1" checked="{{curUser.captain === '1'}}"/>是</label>
+         <label><radio value="0" checked="{{curUser.captain === '0'}}"/>否</label>
+        </radio-group>
+      </view>
+
+      <view class="cu-form-group">所属球队:
+        <radio-group bindchange="getUbumen" name="bumen">
+         <label><radio value="a" checked="{{curUser.bumen === 'a'}}"/>一队</label>
+         <label><radio value="b" checked="{{curUser.bumen === 'b'}}"/>二队</label>
+         <label><radio value="c" checked="{{curUser.bumen === 'c'}}"/>三队</label>
+         <label><radio value="d" checked="{{curUser.bumen === 'd'}}"/>联队</label>
+        </radio-group>
+      </view>
+
+    <view class="container">
+      <button class="cu-btn bg-gradual-green text-center" formType="submit">添加报名</button>
+      <button class="cu-btn bg-gradual-blue text-center" bindtap='updateuser'>提交修改</button>
+      <button class="cu-btn bg-gradual-orange text-center" formType="reset">清空内容</button>
+      <button class="cu-btn bg-gradual-red text-center" bindtap='deleteuser'>删除信息</button>
+    </view>
+  </form>
+
+
